@@ -1,20 +1,32 @@
 # Problema 3
 
-# def read_integer():
-#     number = input("Enter a number:")
-#     try:
-#         value = int(number)
-#         return value
-#     except ValueError:
-#         return 0
-#
+def read_integer():
+    number = input("Enter a number:")
+    try:
+        value = int(number)
+        return value
+    except ValueError:
+        return 0
+
 # # Problema 2
-#
-# def get_sum(n):
-#     if n == 0:
-#         return 0
-#     else:
-#         return n + get_sum(n - 1)
+def get_sum(n):
+    if n == 0:
+        return 0
+    else:
+        return n + get_sum(n - 1)
+get_sum(50)
+
+def sum_even(n):
+    if n == 0:
+        return 0
+    elif n % 2 != 0:
+        return sum_even(n - 1)
+    else:
+        return n + sum_even(n - 2)
+sum_even(9)
+
+
+
 
 # Problema 1
 
