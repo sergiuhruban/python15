@@ -19,18 +19,18 @@
 # Problema 1
 
 def sum_numbers(*args, **kwargs):
-    sum = 0
+    s = 0
     for param in args:
         try:
-            sum += float(param)
+            s += float(param)
         except (TypeError, ValueError):
             pass
     for param in kwargs.values():
         try:
-            sum += float(param)
+            s += float(param)
         except (TypeError, ValueError):
             pass
-    return sum
+    return s
 
 
 sum_numbers(1, 5, -3, 'abc', [12, 56, 'cad'])
