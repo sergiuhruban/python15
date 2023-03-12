@@ -24,12 +24,12 @@ def sum_numbers(*args, **kwargs):
         try:
             s += float(param)
         except (TypeError, ValueError):
-            pass
+            break
     for param in kwargs.values():
         try:
             s += float(param)
         except (TypeError, ValueError):
-            pass
+            break
     return s
 
 
