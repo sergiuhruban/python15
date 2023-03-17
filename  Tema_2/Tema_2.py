@@ -1,6 +1,6 @@
 
 
-for i in range(3):§
+for i in range(3):
     try:
         age = int(input('Age:'))
         print(f'Your age is:{age}')
