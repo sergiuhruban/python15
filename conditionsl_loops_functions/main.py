@@ -161,18 +161,82 @@
 #     print(f"number = {number} is odd")
 
 
-while True:
+# while True:
+#
+#     try:
+#         age = int(input("Age:"))
+#     except ValueError:
+#         print("Invalid age")
+#         continue
+#
+#
+#     if age >= 18:
+#         print("you are a grown up!")
+#     else:
+#         print("you are a child")
+#
+#     break
 
-    try:
-        age = int(input("Age:"))
-    except ValueError:
-        print("Invalid age")
-        continue
+# def get_number():
+#     number = input("number:")
+#     return int(number)
+#
+#
+# def get_validated_number():
+#     while True:
+#         try:
+#             number = get_number()
+#             return number
+#         except ValueError:
+#             print("Value for input is not a number. Try again")
+#
+#
+# def show_sum_of_numbers(a, b):
+#     print(f"Sum of {a} and {b} is {a + b}")
 
 
-    if age >= 18:
-        print("you are a grown up!")
-    else:
-        print("you are a child")
+# show_sum_of_numbers(2, 9)
+# show_sum_of_numbers(9, 9)
 
-    break
+# a = get_validated_number()
+# b = get_validated_number()
+# show_sum_of_numbers(a, b)
+
+# n1 = get_validated_number()
+# n2 = get_validated_number()
+# show_sum_of_numbers(n1, n2)
+
+# def get_number():
+#     number = int(input('number:'))
+#     print('number=', number)
+#     return number
+#
+# def show_sum_of_numbers():
+#     a = get_number()
+#     b = get_number()
+#     print("first number is:", a)
+#     print("second number is:", b)
+#     print('Sum=', a + b)
+#
+# show_sum_of_numbers()
+# show_sum_of_numbers()
+# show_sum_of_numbers()
+
+# def my_function(my_list):
+#     my_list = my_list.copy()
+#
+#     my_list.append(4)
+#     return my_list
+#
+#
+# l1 = [1, 2, 3]
+# l2 = my_function(l1)
+#
+# assert l1 is not l2
+# assert l1 != l2
+
+def f(n):
+    if n > 0:
+        f(n-1)
+    print(n)
+f(5)
