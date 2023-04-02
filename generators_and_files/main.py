@@ -23,8 +23,8 @@
 
 
 # if __name__ == '__main__':
-#     # file = open("/Users/sergiuhruban/PycharmProjects/python15/generators_and_files/data.txt", "r")
-#     file = open("data.txt", "r")
+#     # file = open("/Users/sergiuhruban/PycharmProjects/python15/generators_and_files/data", "r")
+#     file = open("data", "r")
 #     line = file.readline()
 #     print(line)
 #     line = file.readline()
@@ -36,7 +36,7 @@
 #     print(line)
 
 # if __name__ == '__main__':
-#     with open("data.txt") as file:
+#     with open("data") as file:
 #         # content = file.read()
 #         # lines = file.readlines()
 #         lines = (line for line in file.readlines())
@@ -47,7 +47,7 @@
 #         print(line.replace("\n", ""))
 
 # if __name__ == '__main__':
-#     with open("data.txt", "w") as file:
+#     with open("data", "w") as file:
 #         # file.write("Heloo world")
 #         file.writelines([
 #             "Hello world! \n",
@@ -60,7 +60,7 @@
 #         ])
 
 # if __name__ == '__main__':
-#     with open("data.txt", "w") as file:
+#     with open("data", "w") as file:
 #         file.write("Append line a1\n")
 #         file.writelines([
 #             "Append line a2\n",
@@ -69,11 +69,38 @@
 #         ])
 #
 
+# if __name__ == '__main__':
+#     with open("luceafarul_in") as f:
+#         lines = (line for line in f.readlines())
+#
+#     content = ["\nStrofa 1\n"]
+#     count = 2
+#     for line in lines:
+#         if line == "\n":
+#             content.append(f"\nStrofa {count}\n")
+#             count += 1
+#         else:
+#             content.append(line)
+#
+#     with open("luceafarul_in", "w") as f:
+#         f.writelines(content)
 
 
+    # with open("luceafarul_out", "w") as f:
+    #     f.write(content)
 
+import json
 
+if __name__ == '__main__':
+    with open("data.json") as f:
+        data = json.load(f)
 
+    # personal_data = [f"{person['student']}"]
+    #
+    # print(data)
+
+    with open("data-out.json", "w") as f:
+        json.dump(data, f, indent=4)
 
 
 
