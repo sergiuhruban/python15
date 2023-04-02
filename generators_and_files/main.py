@@ -61,7 +61,7 @@
 
 if __name__ == '__main__':
     with open("data.txt", "w") as file:
-        file.write("Append line a1")
+        file.write("Append line a1\n")
         file.writelines([
             "Append line a2\n",
             "Append line a3\n",
